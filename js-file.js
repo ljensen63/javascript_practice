@@ -16,3 +16,21 @@ div.style.border = '1px solid black';
 div.style.backgroundColor = 'pink';
 h1.textContent = 'I\'m in a div';
 para2.textContent = 'ME TOO!';
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', function (e) {
+    console.log(e.target);
+  });
+  btn.addEventListener('click', function (e) {
+    e.target.style.background = 'blue';
+  });
+  
+  const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
